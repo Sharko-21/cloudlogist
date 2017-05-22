@@ -1,0 +1,97 @@
+.log_in_button {
+    padding: 8px 0px;
+    border: none;
+    border-radius: 4px;
+    width: 140px;
+    color: white;
+    background: #fa594c; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #fa594c 0%, #fa594c 0%, #fa594c 9%, #fa594c 9%, #fb6042 20%, #fb6140 40%, #fb643b 53%, #fc6c2e 82%, #fc6c2e 91%, #fc6c2e 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #fa594c 0%,#fa594c 0%,#fa594c 9%,#fa594c 9%,#fb6042 20%,#fb6140 40%,#fb643b 53%,#fc6c2e 82%,#fc6c2e 91%,#fc6c2e 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #fa594c 0%,#fa594c 0%,#fa594c 9%,#fa594c 9%,#fb6042 20%,#fb6140 40%,#fb643b 53%,#fc6c2e 82%,#fc6c2e 91%,#fc6c2e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fa594c', endColorstr='#fc6c2e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.forgot_pas {
+    display: inline-block;
+    color: #00abff;
+
+    margin-bottom: 10px;
+    cursor: pointer;
+    width: 130px;
+}
+
+.f_p {
+    color: #00abff;
+}
+
+#parent {height: 850px; margin-top: -150px;}
+#floater {
+    float: left;
+    height: 50%;
+    width: 100%;
+    margin-bottom: -50px;
+}
+#child {
+    clear: both;
+    height: 100px;
+}
+
+.transition {
+    background-color: rgba(128, 128, 128, 0.2);;
+     height: 100vh;
+     width: 62px;
+     position: fixed;
+     right: 0px;
+     top: 0px;
+     cursor: pointer;
+ }
+
+.transition:hover {
+    background-color: rgba(128, 128, 128, 0.65);
+    transition: 0.2s all;
+}
+
+.transition_arrow {
+    color: white;
+    font-size: 30px;
+    right: 1%;
+    top: 49%;
+    position: fixed;
+}
+
+.transition_right {
+    background-color: rgba(128, 128, 128, 0.2);;
+    height: 100vh;
+    width: 62px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    cursor: pointer;
+}
+
+.transition_right:hover {
+    background-color: rgba(128, 128, 128, 0.65);
+    transition: 0.2s all;
+}
+
+.transition_right_arrow {
+    color: white;
+    font-size: 30px;
+    left: 1%;
+    top: 49%;
+    position: fixed;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+@media screen and (max-height: 650px){
+    #floater {
+        float: left;
+        height: 0px;
+        width: 100%;
+        margin-bottom: -50px;
+    }
+    #parent {max-height:550px; margin-top: -0px;}
+}

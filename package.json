@@ -1,0 +1,16 @@
+{
+  "name": "application-name",
+  "version": "0.0.1",
+  "dependencies": {
+    "nconf": "latest",
+    "express": "latest",
+    "winston": "latest",
+    "body-parser": "latest",
+    "cookie-parser": "latest",
+    "ejs-locals": "latest",
+    "cookie-session": "latest",
+    "connect": "latest",
+    "notyf": "latest",
+    "request": "latest"
+  }
+}

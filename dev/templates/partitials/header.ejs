@@ -1,0 +1,15 @@
+<link rel = "stylesheet" type="text/css" href="css/header.css">
+
+<header>
+    <div id = "order_type">
+        <a href="send" class="order-type-button">Отправить груз</a>
+        <a href="take" class="order-type-button">Доставить груз</a>
+    </div>
+    <div id = "header_menu">
+        <div id = "profile"><a class = "profile_href" href = "/profile"><i class="fa fa-user" aria-hidden="true"></i></a></div>
+        <a class = "profile_href" href = "/profile"><div class="user_name"><%=UserName = UserName == undefined ? 'Пользователь' : UserName%></div></a>
+        <div id = "notifications_href"><i class="fa fa-bell-o" aria-hidden="true"></i></div>
+        <div id = "notifications_count">+<%=NotiCount%></div>
+    </div>
+    <div style="height: 100px;"></div>
+</header>

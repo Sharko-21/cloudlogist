@@ -1,0 +1,204 @@
+<%layout('../layout/page') %>
+<%blocks.title='Профиль'%>
+<%sidebar = 3%>
+<link rel = stylesheet type="text/css" href = "css/dropzone.css">
+<script src="js/dropzone.js"></script>
+
+<!--<h1 style="text-align: center">Профиль</h1>-->
+<div class="profile">
+    <br>
+    <% if(true) {%>
+        <div class = "avatar"><img src="img/avatar.png" style="max-width: 300px;"></div>
+    <% } %>
+    <div class="profle_info">
+        <h3>Иван Пупкин</h3>
+        <p class="status">
+            Статус:
+            <select class="select_button">
+                <option>Свободен</option>
+                <option>Загружается</option>
+                <option>В пути</option>
+                <option>На месте</option>
+                <option>Разгрузился</option>
+                <option>Ожидает завершения заказа</option>
+            </select>
+        </p>
+        <p>Дата рождения: 1 Января 1907</p>
+        <br>
+        <p>Выполнено заказов: 12</p>
+        <br>
+        <p>E-mail: Test@test.ru</p>
+        <br>
+        <p>Телефон: 8-800-555-35-35</p>
+    </div>
+</div>
+
+<!--<form action="/file-upload" class="dropzone" id = "dropZone">
+    <div class="fallback">
+        <input name="file" type="file" multiple />
+    </div>
+</form>-->
+
+<div style="width: 90%; clear: both">
+    <p style="text-align: center">Доход с начала года</p>
+    <br>
+    <div id="main" style="height:400px;"></div>
+</div>
+
+<script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
+<script type="text/javascript">
+    //Изображения
+    Dropzone.options.myAwesomeDropzone = {
+        paramName: "file", // The name that will be used to transfer the file
+        maxFilesize: 2, // MB
+        accept: function(file, done) {
+            if (file.name == "justinbieber.jpg") {
+                done("Naha, you don't.");
+            }
+            else { done(); }
+        }
+    };
+    $("div#myId").dropzone({ url: "/file/post" });
+
+    // configure for module loader
+    require.config({
+        paths: {
+            echarts: 'http://echarts.baidu.com/build/dist'
+        }
+    });
+
+    // use
+    require(
+        [
+            'echarts',
+            'echarts/chart/bar',
+            'echarts/chart/pie',
+            'echarts/chart/line'
+        ],
+        function (ec) {
+            // Initialize after dom ready
+            var myChart = ec.init(document.getElementById('main'));
+
+            var option = {
+                tooltip : {
+                    trigger: 'axis'
+                },
+                legend: {
+                    data:['Январь','Февраль','Март','Апрель','Май']
+                },
+                toolbox: {
+                    show : true,
+                    feature : {
+                        mark : {
+                            show : true,
+                            title : {
+                                mark : 'Добавить точку',
+                                markUndo : 'Убрать точку',
+                                markClear : 'Очистить все точки'
+                            },
+                            lineStyle : {
+                                width : 2,
+                                color : '#1e90ff',
+                                type : 'dashed'
+                            },
+                        },
+                        dataZoom : {
+                            show : true,
+                            title : {
+                                dataZoom : 'Увеличить',
+                                dataZoomReset : 'Сбросить'
+                            }
+                        },
+                        magicType: {
+                            show : true,
+                            title : {
+                                line : '折线图切换',
+                                bar : '柱形图切换',
+                                stack : '堆积',
+                                tiled : '平铺',
+                                force: '力导向布局图切换',
+                                chord: '和弦图切换',
+                                pie: '饼图切换',
+                                funnel: '漏斗图切换'
+                            },
+                            option: {
+                                // line: {...},
+                                // bar: {...},
+                                // stack: {...},
+                                // tiled: {...},
+                                // force: {...},
+                                // chord: {...},
+                                // pie: {...},
+                                // funnel: {...}
+                            },
+                            type : []
+                        },
+                        restore : {
+                            show : true,
+                            title : 'Обновить'
+                        },
+                        saveAsImage : {
+                            show : true,
+                            title : 'Скачать',
+                            type : 'png',
+                            lang : ['Скачать']
+                        }
+                    }
+                },
+                calculable : true,
+                xAxis : [
+                    {
+                        type : 'category',
+                        boundaryGap : false,
+                        data : ['1','5','10','15','20','25','28']
+                    }
+                ],
+                yAxis : [
+                    {
+                        type : 'value'
+                    }
+                ],
+                series : [
+                    {
+                        name:'Январь',
+                        type:'line',
+                        stack: '总量',
+                        itemStyle: {normal: {areaStyle: {type: 'default'}}},
+                        data:[120, 132, 101, 134, 90, 230, 210]
+                    },
+                    {
+                        name:'Февраль',
+                        type:'line',
+                        stack: '总量',
+                        itemStyle: {normal: {areaStyle: {type: 'default'}}},
+                        data:[220, 182, 191, 234, 290, 330, 310]
+                    },
+                    {
+                        name:'Март',
+                        type:'line',
+                        stack: '总量',
+                        itemStyle: {normal: {areaStyle: {type: 'default'}}},
+                        data:[150, 232, 201, 154, 190, 330, 410]
+                    },
+                    {
+                        name:'Апрель',
+                        type:'line',
+                        stack: '总量',
+                        itemStyle: {normal: {areaStyle: {type: 'default'}}},
+                        data:[320, 332, 301, 334, 390, 330, 320]
+                    },
+                    {
+                        name:'Май',
+                        type:'line',
+                        stack: '总量',
+                        itemStyle: {normal: {areaStyle: {type: 'default'}}},
+                        data:[820, 932, 901, 934, 1290, 1330, 1320]
+                    }
+                ]
+            };
+
+            // Load data into the ECharts instance
+            myChart.setOption(option);
+        }
+    );
+</script>

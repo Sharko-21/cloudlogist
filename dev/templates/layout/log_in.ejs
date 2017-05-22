@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <link rel="icon" type="image/png" href="/img/favicon.png" sizes="32x32">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%=blocks.title%></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://use.fontawesome.com/16fa6f9ce2.js"></script>
+    <link rel = "stylesheet" type = "text/css" href = "/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/notyf.min.css">
+</head>
+<body>
+    <%-body %>
+    <script type="text/javascript" src="/js/notyf.min.js"></script>
+    <script>
+        var notyf = new Notyf({
+        delay:4000,
+        alertIcon: 'fa fa-exclamation-circle',
+        confirmIcon: 'fa fa-check-circle'
+        });
+    </script>
+</body>
+</html>

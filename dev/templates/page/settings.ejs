@@ -1,0 +1,34 @@
+<%layout('../layout/page') %>
+<%blocks.title='Настройки'%>
+<%sidebar = 4%>
+<link rel="stylesheet" type="text/css" href="css/semantic-ui/input.css" />
+
+<div class = "profile_info_edit">
+    <h3 style="margin-bottom: 30px;">О компании</h3>
+    <p style="margin-bottom: 30px; color: red;">Внимание! При создании или изменении компании - заявка будет отправленна модератору на проверку!</p>
+    <div class="input_block"><label for = "surname">Фамилия<input type="text" id = "surname" class = "textblock" placeholder="Фамилия"></label></div>
+    <div class="input_block"><label for = "name">Имя<input type="text" id = "name" class = "textblock" placeholder="Имя"></label></div>
+    <div class="input_block"><label for = "patronymic">Отчество<input type="text" id = "patronymic" class = "textblock" placeholder="Отчество"></label></div>
+    <div class="input_block"><label for = "mail">E-mail<input type="text" id = "mail" class = "textblock" placeholder="E-mail"></label></div>
+    <div class="input_block"><label for = "phone">Телефон<input type="text" id = "phone" class = "textblock" placeholder="Телефон"></label></div>
+    <div class="input_block"><label for = "ur_fiz">Юр./Физ. лицо<input type="text" id = "ur_fiz" class = "textblock" placeholder="Юридическое/Физическое лицо"></label></div>
+    <div class="input_block"><label for = "ur_adres">Юридический адрес<input type="text" id = "ur_adres" class = "textblock" placeholder="Юридический адрес"></label></div>
+    <div class="input_block"><label for = "fact_adres">Фактический адрес<input type="text" id = "fact_adres" class = "textblock" placeholder="Фактический адрес"></label></div>
+    <div class="input_block"><label for = "ip_ooo">ИП/ООО<input type="text" id = "ip_ooo" class = "textblock" placeholder="ОРГН ИП"></label></div>
+    <div class="input_block"><label for = "inn">ИНН<input type="text" id = "inn" class = "textblock" placeholder="ИНН"></label></div>
+    <div class="input_block"><label for = "rsch">Р/Сч<input type="text" id = "rsch" class = "textblock" placeholder="Р/Сч"></label></div>
+    <div class="input_block"><label for = "ksch">К/Сч<input type="text" id = "ksch" class = "textblock" placeholder="К/Сч"></label></div>
+    <div class="input_block"><label for = "bik">БИК<input type="text" id = "bik" class = "textblock" placeholder="БИК"></label></div>
+    <div class="input_block"><label for = "poa">Доверенность<input type="text" id = "poa" class = "textblock" placeholder="Доверенность"></label></div>
+    <div style="text-align: center"><input class="type_button" type="button" value="Сохранить компанию"></div>
+</div>
+
+<div class = "profile_info_edit">
+    <h3 style="margin-bottom: 30px;">Мой автопарк</h3>
+    <div class="input_block"><label for = "brand">Марка<input type="text" id = "brand" class = "textblock" placeholder="Марка"></label></div>
+    <div class="input_block"><label for = "model">Модель<input type="text" id = "model" class = "textblock" placeholder="Модель"></label></div>
+    <div class="input_block"><label for = "car_year">Год выпуска<input type="text" id = "car_year" class = "textblock" placeholder="Год выпуска"></label></div>
+    <div class="input_block"><label for = "lifting_capacity">Грузоподъемность<input type="text" id = "lifting_capacity" class = "textblock" placeholder="Грузоподъемность"></label></div>
+    <br><div class="input_block"><label for = "vehicle_description">Описание автомобиля<textarea id = "vehicle_description" class = "textblock textblock_area" placeholder="Описание автомобиля"></textarea></label></div>
+    <div style="text-align: center"><input class="type_button" type="button" value="Добавить автомобиль"></div>
+</div>

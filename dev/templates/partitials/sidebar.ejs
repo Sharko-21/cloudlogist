@@ -1,0 +1,34 @@
+<link rel = "stylesheet" type="text/css" href="css/sidebar.css">
+
+<aside>
+    <ul>
+        <a href="/"><li class = "main-logo">CLOUD LOGISTICS</li></a>
+        <a href="/" class="elem_menu"><li><i class="fa fa-book" aria-hidden="true"></i>Биржа заявок</li></a>
+        <a href="/orders" class="elem_menu"><li><i class="fa fa-bookmark" aria-hidden="true"></i>Мои заказы</li></a>
+        <a href="/profile" class="elem_menu"><li><i class="fa fa-user" aria-hidden="true"></i>Профиль</li></a>
+        <a href="/settings" class="elem_menu"><li><i class="fa fa-cog" aria-hidden="true"></i>Настройки</li></a>
+        <a id = "exit" class="elem_menu"><li><i class="fa fa-sign-out" aria-hidden="true"></i>Выйти</li></a>
+    </ul>
+</aside>
+
+<script>
+
+    var sidebar = <%=sidebar%>
+    $( document ).ready(function() {
+        console.log($('aside > ul> a:nth-child(' + sidebar + ')'));
+      $('aside > ul> a:nth-child(' + (sidebar+1) + ')').children(1).addClass('current_elem_menu');
+    });
+    
+    $(document).on('click', '#exit', function () {
+        $.ajax({
+            url: '/exit',
+            type: 'POST',
+            data: ({}),
+            dataType: 'json',
+            success: function funcSuc(data) {
+                console.log(data);
+                location.reload();
+            }
+        });
+    });
+</script>

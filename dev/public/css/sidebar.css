@@ -1,0 +1,59 @@
+aside {
+    background-color: #252834;
+    display: inline-block;
+    position: fixed;
+    height: 100vh;
+}
+
+aside li {
+    list-style: none;
+    margin: 0px;
+    padding: 10px 60px;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.21);
+    border-right: none;
+    border-left: none;
+    transition: 0.3s all;
+}
+
+aside > ul > a:nth-child(2) > li{
+    border-top: 1px solid rgba(0, 0, 0, 0.21) !important;
+}
+
+.elem_menu > li{
+    padding: 20px 0px;
+}
+
+.elem_menu > li:hover {
+    /*border-left: 4px solid rgba(255, 165, 0, 0);*/
+    background: linear-gradient(to right,
+    orange 1.5%,
+    rgba(0, 0, 0, 0.21) 1.5%, rgba(0, 0, 0, 0.21) 100%);
+    transition: 0.3s all;
+}
+
+.current_elem_menu {
+    background: linear-gradient(to right,
+    orange 1.5%,
+    rgba(0, 0, 0, 0.21) 1.5%, rgba(0, 0, 0, 0.21) 100%);
+    transition: 0.3s all;
+}
+
+aside a {
+    text-decoration: none;
+    color: white;
+
+}
+
+aside i {
+    position: relative;
+    margin-right: 10px;
+    margin-left: 32%;
+}
+
+.main-logo {
+    font-size: 25px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border: none !important;
+}
